@@ -57,7 +57,7 @@ const App = () => {
 
   const searchCars = async (message, customStartPage = 1) => {
     try {
-      const response = await fetch('/search', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/search`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
